@@ -1,0 +1,19 @@
+<div *ngIf="schedule">
+    <h2>{{ schedule.name | uppercase }} Details</h2>
+    <table>
+        <tr>
+            <th>Lecture</th>
+            <th>Class</th>
+            <th>Start Time</th>
+            <th>Duration</th>
+        </tr>
+        <tr>
+            <td><input [(ngModel)]="schedule.name" placeholder="Schedule name"></td>
+            <td><input [(ngModel)]="schedule.clase" placeholder="Schedule clase"></td>
+            <td><input [(ngModel)]="schedule.start" placeholder="Schedule start"></td>
+            <td><input [(ngModel)]="schedule.duration" placeholder="Schedule duration"></td>
+        </tr>
+    </table>
+    <button type="button" (click)="goBack()">Go back</button>
+    <button type="button" (click)="save()">Save</button>
+</div>

@@ -1,0 +1,6 @@
+<h2>Mis Asignaturas</h2>
+<div *ngFor="let asignatura of asignaturas">
+    <div class="space"><span>id: {{asignatura._id}}</span> Name: {{asignatura.name}}</div>
+    
+</div>
+<button type="button" (click)="goBack()">Go back</button>

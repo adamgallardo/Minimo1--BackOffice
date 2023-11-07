@@ -1,0 +1,12 @@
+<h2>Asignaturas</h2>
+<ul class="asignaturas">
+  <li *ngFor="let asignatura of asignaturas" class="flex-container">
+    <a>
+      <span class="badge">id: {{asignatura._id}}</span> Name: {{asignatura.name}}
+    </a>
+  </li>
+  <div class="pagination" style="margin-top: auto; display: flex; justify-content: center; color:#fffcea;">
+    <button type="button" [disabled]="currentPage === 1" (click)="previousPage()"> << Previous </button>
+    <button type="button" [disabled]="currentPage === totalPages" (click)="nextPage()"> Next >> </button>
+  </div>
+</ul>

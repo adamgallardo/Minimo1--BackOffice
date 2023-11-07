@@ -1,0 +1,15 @@
+<h2>Create new user</h2>
+<div>
+    <label for="user-name">User name: </label>
+    <input id="user-name" [(ngModel)]="user.name" placeholder="User name"/>
+    <label for="email">Email: </label>
+    <input id="email" [(ngModel)]="user.email" placeholder="e.g. user@ea.com"/>
+    <label for="password">Password: </label>
+    <input id="password" [(ngModel)]="user.password" placeholder="Password"/>
+</div>
+<div>
+    <button type="button" class="back" title="back"
+    (click)="goBack()">Go back</button>
+    <button type="button" class="create" title="create user"
+    (click)="createUser()">Save</button>
+</div>

@@ -1,0 +1,19 @@
+<h2>Users</h2>
+<button type="button" class="create" title="create user"
+routerLink="/user_create">Create new user</button>
+<ul class="users">
+  <li *ngFor="let user of users" class="flex-container">
+    <a routerLink="/detail/{{user._id}}">
+      <span class="badge">id: {{user._id}}</span> Name: {{user.name}}
+    </a>
+    <button type="button" class="delete" title="delete user"
+      (click)="delete(user)">x</button>
+    <button type="button" class="asignaturas" title="asignaturas user"
+      routerLink="/asignatura_user/{{user._id}}">!</button>
+  </li>
+  <div class="pagination" style="margin-top: auto; display: flex; justify-content: center; color:#fffcea;">
+    <button type="button" [disabled]="currentPage === 1" (click)="previousPage()"> << Previous </button>
+    <button type="button" [disabled]="currentPage === totalPages" (click)="nextPage()"> Next >> </button>
+  </div>
+</ul>
+<!-- <pagination-controls (pageChange)="pageChanged($event)"></pagination-controls> -->

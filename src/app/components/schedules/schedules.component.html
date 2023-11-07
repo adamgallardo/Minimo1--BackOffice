@@ -1,0 +1,16 @@
+<h2>Schedules</h2>
+<button type="button" class="create" title="create schedule"
+routerLink="/schedule_create">Create new schedule</button>
+<ul class="schedules">
+  <li *ngFor="let schedule of schedules" class="flex-container">
+    <a routerLink="/schedule_details/{{schedule._id}}">
+      <span class="badge">id: {{schedule._id}}</span> Name: {{schedule.name}}
+    </a>
+    <button type="button" class="delete" title="delete schedule"
+      (click)="delete(schedule)">x</button>
+  </li>
+  <div class="pagination" style="margin-top: auto; display: flex; justify-content: center; color:#fffcea;">
+    <button type="button" [disabled]="currentPage === 1" (click)="previousPage()"> << Previous </button>
+    <button type="button" [disabled]="currentPage === totalPages" (click)="nextPage()"> Next >> </button>
+  </div>
+</ul>
