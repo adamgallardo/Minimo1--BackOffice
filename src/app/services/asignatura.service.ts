@@ -9,7 +9,7 @@ import { IAsignatura } from '../models/asignatura';
 })
 export class AsignaturaService {
 
-  private asignaturasUrl = 'http://localhost:9090/asignaturas';
+  private asignaturasUrl = 'http://localhost:27017/asignaturas';
 
   httpOptions = {
     headers: new HttpHeaders({ 'Content-Type': 'application/json' })
