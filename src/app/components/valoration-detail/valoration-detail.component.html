@@ -1,0 +1,11 @@
+<div *ngIf="valoration">
+    <h2>{{valoration.name | uppercase}} Details</h2>
+    <div class="space"><span>id: </span>{{valoration._id}}</div>
+    <div>
+        <label for="user-name">Mark: </label>
+        <input id="user-name" [(ngModel)]="valoration.mark" placeholder="Mark"/>
+      </div>    
+    <div class="space"><span>Participation: </span>{{valoration.participation}}</div>
+    <button type="button" (click)="goBack()">Go back</button>
+    <button type="button" (click)="save()">Save</button>
+  </div>

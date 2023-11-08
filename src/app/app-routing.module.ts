@@ -8,6 +8,8 @@ import { UserCreateComponent } from './components/user-create/user-create.compon
 import { ScheduleCreateComponent } from './components/schedule-create/schedule-create.component';
 import { AsignaturasComponent } from './components/asignaturas/asignaturas.component';
 import { AsignaturasUserComponent } from './components/asignaturas-user/asignaturas-user.component';
+import { ValorationComponent } from './components/valoration/valoration.component';
+import { ValorationDetailComponent } from './components/valoration-detail/valoration-detail.component';
 
 const routes: Routes = [
   {path: 'users', component: UsersComponent},
@@ -17,7 +19,9 @@ const routes: Routes = [
   {path: 'asignaturas', component: AsignaturasComponent},
   {path: 'user_create', component: UserCreateComponent},
   {path: 'schedule_create', component: ScheduleCreateComponent},
-  {path: 'asignatura_user/:id', component: AsignaturasUserComponent}
+  {path: 'asignatura_user/:id', component: AsignaturasUserComponent},
+  {path: 'valoration', component: ValorationComponent},
+  {path: 'valoration-detail/:id', component: ValorationDetailComponent}
 ];
 
 @NgModule({

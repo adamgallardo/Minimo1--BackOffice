@@ -1,0 +1,17 @@
+<h2>Valorations</h2>
+<button type="button" class="create" title="create valoration"
+routerLink="/valoration">Create new valoration</button>
+<ul class="valorations">
+  <li *ngFor="let valoration of valorations" class="flex-container">
+    <a routerLink="/valoration-detail/{{valoration._id}}">
+      <span class="badge">id: {{valoration._id}}</span> Name: {{valoration.name}}
+    </a>
+    <button type="button" class="delete" title="delete valoration"
+      (click)="delete(valoration)">x</button>
+  </li>
+  <div class="pagination" style="margin-top: auto; display: flex; justify-content: center; color:#fffcea;">
+    <button type="button" [disabled]="currentPage === 1" (click)="previousPage()"> << Previous </button>
+    <button type="button" [disabled]="currentPage === totalPages" (click)="nextPage()"> Next >> </button>
+  </div>
+</ul>
+<!-- <pagination-controls (pageChange)="pageChanged($event)"></pagination-controls> -->

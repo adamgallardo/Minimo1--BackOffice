@@ -14,6 +14,8 @@ import { ScheduleDetailComponent } from './components/schedule-detail/schedule-d
 import { UserCreateComponent } from './components/user-create/user-create.component';
 import { ScheduleCreateComponent } from './components/schedule-create/schedule-create.component';
 import { AsignaturasUserComponent } from './components/asignaturas-user/asignaturas-user.component';
+import { ValorationComponent } from './components/valoration/valoration.component';
+import { ValorationDetailComponent } from './components/valoration-detail/valoration-detail.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +27,9 @@ import { AsignaturasUserComponent } from './components/asignaturas-user/asignatu
     ScheduleDetailComponent,
     UserCreateComponent,
     ScheduleCreateComponent,
-    AsignaturasUserComponent
+    AsignaturasUserComponent,
+    ValorationComponent,
+    ValorationDetailComponent
   ],
   imports: [
     BrowserModule,
